@@ -1,0 +1,24 @@
+<h2>Address</h2>
+<%= f.fields_for :addresses do |ff| %>
+  <div>
+    <%= ff.label :street_address %>
+    <%= ff.text_field :street_address %>
+
+    <%= ff.label :city %>
+    <%= ff.text_field :city %>
+
+    <%= ff.label :state %>
+    <%= ff.text_field :state %>
+
+    <%= ff.label :country %>
+    <%= ff.text_field :country %>
+
+    <%= ff.label :postal_code %>
+    <%= ff.text_field :postal_code %>
+
+    <% if ff.object.persisted? %>
+      <%= ff.check_box :_destroy %>
+      <%= ff.label :_destroy, "Destroy" %>
+    <% end %>
+  </div>
+<% end %>

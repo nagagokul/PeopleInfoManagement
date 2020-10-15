@@ -1,0 +1,13 @@
+<h1>Welcome <%= @user.first_name %></h1>
+
+<p>
+    <strong>FirstName: </strong> <%= @user.first_name %><br />
+    <strong>LastName :</strong> <%= @user.last_name %><br />
+    <strong>Age :</strong> <%= @user.age %><br />
+    <strong>Gender :</strong> <%= @user.gender %><br />
+    <strong>MartialStatus :</strong> <%= @user.martial_status %><br />
+</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>

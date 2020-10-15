@@ -1,0 +1,14 @@
+<h1>Edit User Detail</h1>
+
+<%= form_for @user, :url =>{:action => "update", :id =>@user} do |f| %>
+
+<p>FirstName: <%= f.text_field 'first_name' %></p>
+<p>LastName: <%= f.text_field 'last_name' %></p>
+<p>Age: <%= f.text_field 'age' %></p>
+<p>Gender: <%= f.text_field  'gender' %></p>
+<p>DateOfBirth: <%= f.text_field 'date_of_birth' %></p>
+<p>MartialStatus: <%= f.text_field 'martial_status' %></p>
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>
